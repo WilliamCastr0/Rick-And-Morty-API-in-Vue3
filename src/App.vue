@@ -1,30 +1,42 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/characters">About</router-link>
+  <div class="container">
+    <h1>Rick And Morty (Challenge Code)</h1>
+    <ListCharacters />
   </div>
-  <router-view/>
 </template>
 
+<script>
+import ListCharacters from './components/ListCharacters.vue'
+
+export default {
+  components: {
+    ListCharacters
+  }
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
+  margin: 1.5%;
+  padding: 0;
+}
+
+body {
+  background-color: #24282F;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+h1 {
+  margin-bottom: 3rem;
   text-align: center;
-  color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
+.containter {
+  width: 980px;
+  max-width: 90%;
+  margin: 5rem auto;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+img {
+  width: 100%;
 }
 </style>

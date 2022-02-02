@@ -39,8 +39,6 @@ export default createStore({
       commit('setCharacters', data.results);
       commit('setInformations', data.info);
       commit('setCharactersFilter', data.results);
-
-      console.log(newUrl);
     },
 
     async changeNextCharacters({ commit, state } ) {
@@ -51,8 +49,6 @@ export default createStore({
       commit('setCharacters', data.results);
       commit('setInformations', data.info);
       commit('setCharactersFilter', data.results);
-
-      console.log(newUrl);
     }
 
   },

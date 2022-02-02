@@ -1,10 +1,10 @@
 <template>
     <div class="pagination">
         <div class="item" @click="nextCharacters()">
-            Prev
+            Next
         </div>
         <div class="item" @click="previousCharacters()">
-            Next
+            Previous
         </div>        
     </div>
     <section>
@@ -28,17 +28,17 @@ export default {
 
     setup(){
         const store = useStore();
-
         const characters = computed( () => {
             return store.state.charactersFilter;
         });
 
         const nextCharacters = ( () => {
-            store.dispatch('changeNextCharacters')
+            store.dispatch('changeNextCharacters');
+            
         } )
         
         const previousCharacters = ( () => {
-            store.dispatch('changePreviousCharacters')
+            store.dispatch('changePreviousCharacters');
         } )        
 
         onMounted( () => {
@@ -49,24 +49,30 @@ export default {
         return {
             characters,
             nextCharacters,
-            previousCharacters
+            previousCharacters,
         }
     }
 }
 </script>
 
 <style>
+.characters {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 3rem 0;
+}
 .pagination {
-    width: 400px;
+    width: 200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     border-radius: 10px;
     overflow: hidden;
 }
 .item {
     padding: 1rem 0.5rem;
-    background-color: darkblue;
+    background-color: #3C3E44;
     text-align: center;
     cursor: pointer;
 }

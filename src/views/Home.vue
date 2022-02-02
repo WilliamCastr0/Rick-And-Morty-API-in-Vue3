@@ -12,7 +12,8 @@ import ListCharacters from '../components/ListCharacters.vue'
 export default {
   name: 'Home',
   components: {
-    ListCharacters
+    ListCharacters,
+    
   }
 }
 </script>

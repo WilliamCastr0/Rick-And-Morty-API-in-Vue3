@@ -1,4 +1,4 @@
-# Trascender Global Challenge
+# Single Page en Vue3 con la API Rick And Morty
 
 ## ¿Cómo iniciar mi proyecto?
 El proyecto se encuentra subido a un hosting desarrollado en Firebase y lo puedes visualizar a través del siguiente link :D
